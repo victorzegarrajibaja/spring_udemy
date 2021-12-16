@@ -4,6 +4,7 @@ import mx.com.gm.dao.PersonaDao;
 import mx.com.gm.domain.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,7 +19,9 @@ public class PersonaServiceImpl implements PersonaService{
         return (List<Persona>) personaDao.findAll();
     }
 
+
     @Override
+    @Transactional
     public void guardar(Persona persona) {
           personaDao.save(persona);
     }

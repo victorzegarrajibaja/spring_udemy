@@ -5,13 +5,13 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
 @Data
 @Entity
 @Table(name= "persona")
-public class Persona  implements Serializable {
+public class Persona  {
 
-    private static final long serialVersionUID=1L;
-
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPersona;
